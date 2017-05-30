@@ -23,7 +23,7 @@
 <div class="navBar">
         <ul>
             <li>
-                <a href="orderVegetables.php" class="<?php if($page ==  "orderVegetables") {echo "current";} ?>">
+                <a href="index.php" class="<?php if($page ==  "orderVegetables") {echo "current";} ?>">
                     Order Vegetables
                 </a>
             </li>

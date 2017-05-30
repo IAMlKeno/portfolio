@@ -41,7 +41,8 @@ if(empty($_POST['fName']) && empty($_POST['lName']) && empty($_POST['phone']) &&
 else if (isset($_SESSION['veggies'])) {
     $noItemsSelected = false;
     foreach ($_SESSION['veggies'] as $veg) {
-        if (!empty($_POST[$veg->name]))
+        $index = str_replace(' ', '_', $veg->name);
+        if (!empty($_POST[$index]))
             $noItemsSelected = true;
     }
 
@@ -67,8 +68,9 @@ $email = $_POST['email'];// create the line
 $order = array();
 foreach ($_SESSION['veggies'] as $veg)
 {
-    if($_POST[$veg->name] > 0)
-        array_push($order, new Line(ucfirst($veg->name), $_POST[$veg->name], $veg->price));
+    $index = str_replace(' ', '_', $veg->name);
+    if($_POST[$index] > 0)
+        array_push($order, new Line(ucfirst($veg->name), $_POST[$index], $veg->price));
 }
 $total = 0;
 
@@ -150,7 +152,7 @@ echo "
 if($taxedTotal >= FREE_DELIVERY) {
     echo "
                 <p>Heads up! YOU GOT FREE SHIPPING! <br><br>
-                <a href='orderVegetables.php'>Add another order</a> now?<br>
+                <a href='index.php'>Add another order</a> now?<br>
                 Or would you like to <strong><a href='resetVeggies.php'>reset the orders</a></strong>?</p>
                 </div>
             </div>
@@ -158,7 +160,7 @@ if($taxedTotal >= FREE_DELIVERY) {
 	        </html>";
 } else {
     echo "
-                <p><a href='orderVegetables.php'>Add another order</a> now?<br>
+                <p><a href='index.php'>Add another order</a> now?<br>
                 Or would you like to <strong><a href='resetVeggies.php'>reset the orders</a></strong>?</p>
                 </div>
             </div>

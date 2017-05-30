@@ -35,9 +35,9 @@ $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
 
             echo '
                         <div id="content"><p><strong> The orders files has been reset!</strong></p><br>
-                        <p><a href="orderVegetables.php">Return to orders page?</a></p></div>';
+                        <p><a href="index.php">Return to orders page?</a></p></div>';
         } else {
-            header("Location: orderVegetables.php");
+            header("Location: index.php");
         }
     }
     include("fragments/footer.php")
