@@ -15,7 +15,7 @@ $title = "directory";
 </head>
 <body>
     <ul>
-        <li>Example 1</li>
+        <a href="phpReadWriteExample/index.php"><li>Example 1</li></a>
         <li>Example 2</li>
     </ul>
 </body>
