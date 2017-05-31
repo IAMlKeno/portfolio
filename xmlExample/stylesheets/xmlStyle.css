@@ -1,0 +1,57 @@
+#container
+{
+    margin-top: 50px;
+    font-family: "Arial", Arial, san-serif;
+}
+
+#audioContainer{
+    margin: auto;
+    width: 65%;
+    border: 2px solid red;
+    padding: 5px;
+}
+
+.forecast
+{
+    border: 1px solid black;
+}
+.forecast tr
+{
+    width: 100%
+}
+.forecast td
+{
+    width:20%;
+    border: 1px solid black;
+    padding: 0 0 0 0;
+    max-height: 400px;
+    vertical-align: top;
+}
+
+.forecastImg
+{
+    width: 75%;
+}
+
+.location
+{
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.degrees
+{
+    font-style: oblique;
+}
+
+.dateIssued
+{
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.heading
+{
+    font-size: x-large;
+    font-weight: bold;
+}

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="avStyle.xsl"?>
+<inventory>
+    <receiver>
+        <brand>Denon</brand>
+        <model>AVR-X7200WA</model>
+        <watts>260</watts>
+        <channels>9.2</channels>
+    </receiver>
+    <receiver>
+        <brand>Denon</brand>
+        <model>AVR-X4200W</model>
+        <watts>235</watts>
+        <channels>7.2</channels>
+    </receiver>
+    <receiver>
+        <brand>Yamaha</brand>
+        <model>RX-S601</model>
+        <watts>95</watts>
+        <channels>5.1</channels>
+    </receiver>
+    <receiver>
+        <brand>Yamaha</brand>
+        <model>HTR-3067</model>
+        <watts>100</watts>
+        <channels>5.1</channels>
+    </receiver>
+    <receiver>
+        <brand>Harmon/Kardon</brand>
+        <model>AVR 3700</model>
+        <watts>625</watts>
+        <channels>7.2</channels>
+    </receiver>
+    <receiver>
+        <brand>Harmon/Kardon</brand>
+        <model>AVR 1510</model>
+        <watts>375</watts>
+        <channels>5.1</channels>
+    </receiver>
+    <receiver>
+        <brand>Pioneer</brand>
+        <model>VSX-LX101</model>
+        <watts>980</watts>
+        <channels>7.2</channels>
+    </receiver>
+    <receiver>
+        <brand>Pioneer</brand>
+        <model>VSX-45</model>
+        <watts>400</watts>
+        <channels>5.2</channels>
+    </receiver>
+    <receiver>
+        <brand>Marantz</brand>
+        <model>SR-7011</model>
+        <watts>1125</watts>
+        <channels>9.2</channels>
+    </receiver>
+    <receiver>
+        <brand>Marantz</brand>
+        <model>NR 1601</model>
+        <watts>350</watts>
+        <channels>7.2</channels>
+    </receiver>
+</inventory>
