@@ -96,24 +96,46 @@ $title = "directory";
     <main class="mdl-layout__content mdl-color--grey-100" style="min-height:600px">
         <div class="mdl-grid demo-content">
             <div class="mdl-card-wide mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
-                    <div id="container" class="jumbotron" style="width: 60%; margin: auto; padding-left: 10px; padding-right: 10px">
-                        <div class="mdl-card__title">
-                            <h2 class="mdl-card__title-text">PHP - File Read & Write Example</h2>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            <p>
-                                This is a PHP project completed by Elkeno Jones during my time at Holland College. It demonstrates the usage
-                                of PHP object oriented programming. It also demonstrates using PHP to read and write files on the server.
-                            </p>
-                        </div>
-                        <div class="mdl-card__actions mdl-card--border">
-                            <a href="phpReadWriteExample/index.php">
-                                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                                    PHP File Read & Write Example
-                                </button>
-                             </a>
-                        </div>
+                <div id="container" class="jumbotron" style="width: 60%; margin: auto; padding-left: 10px; padding-right: 10px">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">PHP - File Read & Write Example</h2>
                     </div>
+                    <div class="mdl-card__supporting-text">
+                        <p>
+                            This is a PHP project completed by Elkeno Jones during my time at Holland College. It demonstrates the usage
+                            of PHP object oriented programming. It also demonstrates using PHP to read and write files on the server.
+                        </p>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a href="phpReadWriteExample/index.php">
+                             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                                PHP File Read & Write Example
+                            </button>
+                         </a>
+                    </div>
+                </div>
+            </div>
+<!--            XML example -->
+            <div class="mdl-card-wide mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
+                <div id="container" class="jumbotron" style="width: 60%; margin: auto; padding-left: 10px; padding-right: 10px">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">PHP & XML - Reading from XML Files</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <p>
+                            This is a combination of PHP, XML and XSLT. This project demonstrates using PHP to read from
+                            XML documents. It also demonstrates using XSLT to properly display the XML files as an HTML
+                            page. There are two XML documents that are used to show this.
+                        </p>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a href="xmlExample/index.php">
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                                PHP - XML Example
+                            </button>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
