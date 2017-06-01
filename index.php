@@ -124,6 +124,30 @@ $title = "directory";
     </div>
     <main class="mdl-layout__content mdl-color--grey-100" style="min-height:600px">
         <div class="mdl-grid demo-content">
+<!--            PHP security management - mobile friendly     -->
+            <div class="mdl-card-wide mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
+                <div id="container" class="jumbotron" style="width: 60%; margin: auto; padding-left: 10px; padding-right: 10px">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">PHP - Secure Login</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <p>
+                            This is a PHP project completed by Elkeno Jones during my time at Holland College. It
+                            demonstrates the usage of PHP object oriented programming, database connection and security
+                            (via user log in). It also demonstrates the use of Material Design Lite to create a mobile
+                            friendly web page.
+                        </p>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a href="comments/index.php">
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                                PHP Security Example
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+<!--            PHP file Reading and Writing    -->
             <div class="mdl-card-wide mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
                 <div id="container" class="jumbotron" style="width: 60%; margin: auto; padding-left: 10px; padding-right: 10px">
                     <div class="mdl-card__title">
