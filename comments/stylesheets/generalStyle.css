@@ -1,0 +1,96 @@
+/*
+ This stylesheet holds the css styling for all of the pages contained on the comments webpage
+ @author Elkeno Jones_ejones109029
+ Date: 2016/10/09
+*/
+body
+{
+    background-color: whitesmoke;
+}
+/*#container*/
+{
+    /*!*width: 800px;*!*/
+    /*!*border: 3px groove darkgray;*!*/
+    /*padding: 10px;*/
+    /*margin: auto;*/
+}
+
+#comments
+{
+    border: 2px solid darkcyan;
+    border-radius: 20px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+table
+{
+    padding: 10px;
+}
+thead
+{
+    font-weight: bold;
+    font-size: large;
+    padding: 5px;
+    color: darkblue;
+}
+
+td:first-of-type
+{
+    border-right: 1px solid black;
+}
+
+td
+{
+    border-bottom: 1px solid black;
+}
+#commentDiv
+{
+    text-align: center;
+    max-height:350px;
+    overflow: auto;
+    margin-bottom: 2%;
+}
+
+.registerInput
+{
+    margin-right: 5em;
+    margin-bottom: 2em;
+}
+
+#header
+{
+    text-align: center;
+    border-top: 2px dashed darkblue;
+    border-bottom: 2px dashed darkblue;
+    margin-bottom: 2em;
+    background-color: darkcyan;
+    color: aliceblue;
+}
+
+.justALittleSpace
+{
+    margin-right: 3em;
+}
+
+.error
+{
+    color: darkred;
+    font-weight: bold;
+}
+
+#loginTable td
+{
+    border: none;
+}
+
+.registerDiv{
+    display:inline-block;
+}
+.loginForm{
+    margin: auto;
+}
+#bannerText{
+    padding-top:10px;
+}
