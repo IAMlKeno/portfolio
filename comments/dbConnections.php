@@ -11,7 +11,7 @@
 namespace comments;
 use mysqli;
 
-$db = new mysqli('localhost', 'cis2288_admin', 'phpisfun', 'cis2288_comments');
+$db = new mysqli('sql11.freemysqlhosting.net', 'sql11177841', 'Cg6KimKvqq', 'sql11177841');
 
 if($db->connect_errno)
 {
