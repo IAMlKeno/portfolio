@@ -5,9 +5,12 @@ Purpose:
 This sql script is to be used to create the comments database used in Elkeno Jones's CIS2288 Assignment 2
  */
 
-CREATE DATABASE `cis2288_comments`;
+-- CREATE DATABASE `cis2288_comments`;
+--
+-- USE `cis2288_comments`;
+CREATE DATABASE `jenny_comments`;
 
-USE `cis2288_comments`;
+USE `jenny_comments`;
 
 /*create a user in database*/
 grant select, insert, update, delete on cis2288_comments.*

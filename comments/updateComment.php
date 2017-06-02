@@ -53,7 +53,7 @@ include ('defaults/banner.php');
                 echo '
                     <form action="updateComment.php" method="post">
                         <input type="hidden" name="commentId" value="' . $comment->commentId . '" />
-                        <div class="mdl-card-wide mdl-cell--12-col mdl-cell--hide-phone">
+                        <div class="mdl-card-wide mdl-cell--12-col mdl-cell--6-col-phone">
                             <textarea id="comment" class="comment" name="comment">' . $comment->message . '</textarea>
                             <script>
                                 CKEDITOR.replace("comment")
@@ -69,21 +69,6 @@ include ('defaults/banner.php');
                             </div>
                         </div>
                         
-                        <div class="mdl-card mdl-small-card mdl-cell--hide-desktop mdl-cell--hide-tablet">
-                            <textarea id="commentPhone" class="comment" name="comment">' . $comment->message . '</textarea>
-                            <script>
-                                CKEDITOR.replace("commentPhone")
-                            </script>
-                            <br />
-                            <div id="buttons" class="mdl-card__actions mdl-card--border">
-                                <input type="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect 
-                                    mdl-button--raised mdl-button--colored" name="updateComment" value="Update" />
-                                <span class="justALittleSpace">
-                                </span>
-                                <input type="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored
-                                    mdl-button--raised" name="deleteComment" value="Delete" />
-                            </div>
-                        <div/>
                     </form>';
             }
             else

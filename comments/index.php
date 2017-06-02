@@ -149,7 +149,7 @@ include("defaults/banner.php");
                 </div>
             </div>
             <br />
-            <div class="mdl-card-wide mdl-shadow--2dp mdl-cell--hide-phone">
+            <div class="mdl-card-wide mdl-shadow--2dp mdl-cell--6-col-phone">
                 <div class="mdl-card__title">
                     <h4 class="mdl-card__title-text">
                         <label for="comment">
@@ -168,25 +168,7 @@ include("defaults/banner.php");
                         mdl-button--raised" name="addComment" value="Submit Comment"/>
                 </div>
             </div>
-            <div class="mdl-card mdl-small-card mdl-shadow--2dp mdl-cell--hide-desktop mdl-cell--hide-tablet">
-                <div class="mdl-card__title">
-                    <h4 class="mdl-card__title-text">
-                        <label for="comment">
-                            Enter your comment below:
-                        </label>
-                    </h4>
-                </div>
-                <div class="mdl-card__supporting-text">
-                    <textarea id="commentPhone" name="comment"></textarea>
-                    <script>
-                        CKEDITOR.replace( "commentPhone" );
-                    </script>
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <input type="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored
-                        mdl-button--raised" name="addComment" value="Submit Comment"/>
-                </div>
-            </div>
+            
         </form>
     </div>
     <div>';
