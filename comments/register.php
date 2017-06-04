@@ -16,6 +16,7 @@ include ("functions/functions.php");
 
 if(isset($_POST['submit']) == true)
 {
+//    echo "<h1>hi</h1>";
     if(!empty($_POST['fName']) && !empty($_POST['lName']) && !empty($_POST['username']) && !empty($_POST['password']))
     {
         $captcha = false;
@@ -26,7 +27,8 @@ if(isset($_POST['submit']) == true)
 
         if(!$captcha)
         {
-            echo "Please check the captcha before proceeding";
+//            echo "Please check the captcha before proceeding";
+            $error = "Please check the captcha before proceeding";
         }
         else
         {
@@ -61,6 +63,7 @@ if(isset($_POST['submit']) == true)
         }
     }
 }
+
 include("defaults/header.php");
 include("defaults/banner.php")
 ?>
@@ -71,38 +74,6 @@ include("defaults/banner.php")
                     Your Information
                 </h4>
             </div>
-<!--            <div class="mdl-card__supporting-text mdl-cell--hide-phone">-->
-<!--                <table class="loginTable">-->
-<!--                    <tr>-->
-<!--                        <td style="border:none">-->
-<!--                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label registerDiv">-->
-<!--                                <input class="mdl-textfield__input" type="text" id="fName" name="fName">-->
-<!--                                <label class="mdl-textfield__label loginText" for="fName">First Name:</label>-->
-<!--                            </div>-->
-<!--                        </td>-->
-<!--                        <td style="border:none">-->
-<!--                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label registerDiv">-->
-<!--                                <input class="mdl-textfield__input" type="text" id="lName" name="lName">-->
-<!--                                <label class="mdl-textfield__label loginText" for="lName">Last Name:</label>-->
-<!--                            </div>-->
-<!--                        </td>-->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <td style="border:none">-->
-<!--                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">-->
-<!--                                <input class="mdl-textfield__input" type="text" id="username" name="username">-->
-<!--                                <label class="mdl-textfield__label loginText" for="username">Username:</label>-->
-<!--                            </div>-->
-<!--                        </td>-->
-<!--                        <td style="border:none">-->
-<!--                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">-->
-<!--                                <input class="mdl-textfield__input" type="password" id="password" name="password">-->
-<!--                                <label class="mdl-textfield__label loginText" for="password">Password:</label>-->
-<!--                            </div>-->
-<!--                        </td>-->
-<!--                    </tr>-->
-<!--                </table>-->
-<!--            </div>-->
             <div class="mdl-card__supporting-text mdl-cell--12-col-desktop">
                 <table class="loginTable">
                     <tr>
@@ -133,8 +104,12 @@ include("defaults/banner.php")
             </div>
             <div class="mdl-card__actions mdl-card__border">
                 <span class="error">
+                    Error
                     <?php if(isset($userAdded) && !$userAdded){echo $error;}?>
+                    <?php if(isset($error)){echo $error;}?>
                 </span>
+                <!-- captcha here -->
+                <div class="g-recaptcha" data-sitekey="6LezwwgUAAAAAPUB3cjvx_fuPMdCrm3vpQ1ixoCz"></div>
                 <hr />
                 <input type="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored
                     mdl-button--raised" name="submit" />
@@ -149,9 +124,6 @@ include("defaults/banner.php")
                 </span>
             </div>
         </div>
-        <br /><br />
-        <!-- captcha here -->
-        <div class="g-recaptcha" data-sitekey="6LezwwgUAAAAAPUB3cjvx_fuPMdCrm3vpQ1ixoCz"></div>
     </form>
 </div>
 

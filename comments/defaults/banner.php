@@ -6,7 +6,7 @@
  * Time: 12:07 PM
  */
 
-//$bannerSection = $section;
+
 ?>
 <div id="header" class="mdl-cell--12-phone mdl-cell--hide-desktop">
     <div class="mdl-grid">
