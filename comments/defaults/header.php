@@ -55,7 +55,8 @@ echo '
             Menu
         </span>
         <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="">This is just to demonstrate the use of MDL lite drawer layout</a>
+            <a class="mdl-navigation__link" href="index.php">Home</a>
+            <a class="mdl-navigation__link" href="../index.php">Back to Portfolio</a>
         </nav>
     </div>
 ';

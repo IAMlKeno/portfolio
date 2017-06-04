@@ -80,23 +80,23 @@ $title = "directory";
     </header>
     <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
         <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-            <a class="mdl-navigation__link" href="">
+            <a class="mdl-navigation__link" href="index.php">
                 <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">
                     home
                 </i>
                 Home
             </a>
-            <a class="mdl-navigation__link" href="">
+            <a class="mdl-navigation__link" href="resume/Elkeno_Jones_Resume.pdf" target="_blank">
                 <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">
-                    inbox
+                    description
+                </i>
+                Elkeno's Resume
+            </a>
+            <a class="mdl-navigation__link" href="mailto:elkeno_q.jones@hotmail.com" target="_blank">
+                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">
+                    email
                 </i>
                 Email
-            </a>
-            <a class="mdl-navigation__link" href="">
-                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">
-                    report
-                </i>
-                About Elkeno
             </a>
             <a class="mdl-navigation__link" href="">
                 <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">
@@ -109,6 +109,12 @@ $title = "directory";
                     report
                 </i>
                 PHP
+            </a>
+            <a class="mdl-navigation__link" href="">
+                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">
+                    report
+                </i>
+                About Elkeno
             </a>
 
             <div class="mdl-layout-spacer"></div>

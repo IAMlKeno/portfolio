@@ -30,6 +30,11 @@
                                 About Project
                             </a>
                         </li>
+                        <li>
+                            <a href="../../index.php">
+                                Back to Portfolio
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div id="container">
