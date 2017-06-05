@@ -52,11 +52,6 @@
                     About Project
                 </a>
             </li>
-            <li>
-                <a href="../index.php" class="<?php if($page ==  "about") {echo "current";} ?>">
-                    Back to Portfolio
-                </a>
-            </li>
-	    </ul>
+    	</ul>
 </div>
     
