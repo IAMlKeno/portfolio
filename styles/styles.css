@@ -209,3 +209,15 @@ _:-ms-input-placeholder, :root .demo-graph {
       -ms-flex-align: center;
           align-items: center;
 }
+
+body{
+    /*background-color: purple;*/
+}
+
+.mdl-card-transparent{
+    background-color: transparent;
+}
+
+small{
+    font-size: 80%;
+}
