@@ -23,13 +23,13 @@ require("Util/fragments/head.php");
                     </div>
                     <div class="mdl-card__supporting-text">
                         <p>
-                            My name is Elkeno Jones. I was born in the Bahamas and currently resides in Canada. I am a
-                            graduate of both the Bahamas Technical & Vocational Institute (Nassau, Bahamas) and Holland
+                            My name is Elkeno Jones. I was born in the Bahamas and currently reside in Canada. I am a
+                            graduate of both the Bahamas Technical & Vocational Institute (BTVI) (Nassau, Bahamas) and Holland
                             College (Prince Edward Island, Canada).
                         </p>
                         <p>
-                            He currently holds an Applied Associates in Science in Electronic Engineering and a Diploma
-                            in Computer Information Systems. I do have a desire to further both my career and education
+                            Currently, I hold an Applied Associates in Science degree in Electronic Engineering (BTVI) and a Diploma
+                            in Computer Information Systems (Holland College). I do have a desire to further both my career and education
                             and welcome any endearing challenges along the way.
                         </p>
                         <p>
