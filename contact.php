@@ -28,14 +28,14 @@ require("Util/fragments/head.php");
                             <li class="mdl-list__item mdl-list__item--two-line">
                                 <span class="mdl-list__item-primary-content">
                                     <i class="material-icons mdl-list__item-avatar">email</i>
-                                    <span>elkeno_q.jones@hotmail.com</span>
+                                    <span>elkenojones@gmail.com</span>
                                     <span class="mdl-list__item-sub-title">email</span>
                                 </span>
                             </li>
                             <li class="mdl-list__item mdl-list__item--two-line">
                                 <span class="mdl-list__item-primary-content">
                                     <i class="material-icons mdl-list__item-avatar">phone</i>
-                                    <span>+1 (902) 394-7518</span>
+                                    <span><a href="tel:+19023947518">+1 (902) 394-7518</a></span>
                                     <span class="mdl-list__item-sub-title">mobile</span>
                                 </span>
                             </li>

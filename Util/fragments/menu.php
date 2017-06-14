@@ -25,7 +25,7 @@
         <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn"
             htmlFor="hdrbtn">
             <a href="about.php"><li class="mdl-menu__item">About</li></a>
-            <a href="about.php"><li class="mdl-menu__item">Contact</li></a>
+            <a href="contact.php"><li class="mdl-menu__item">Contact</li></a>
         </ul>
     </div>
 </header>
