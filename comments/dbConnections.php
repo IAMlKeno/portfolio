@@ -11,7 +11,7 @@
 namespace comments;
 use mysqli;
 
-$db = new mysqli('sql11.freemysqlhosting.net', 'sql11177841', 'Cg6KimKvqq', 'sql11177841');
+$db = new mysqli('sql3.freemysqlhosting.net', 'sql3200003', 'LuhzLynYaM', 'sql3200003');
 
 if($db->connect_errno)
 {
