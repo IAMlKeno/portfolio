@@ -9,7 +9,7 @@
  */
 namespace portfolio;
 use mysqli;
-$db = new mysqli('sql3.freemysqlhosting.net', 'sql3200004', 'EXppZMisaf', 'sql3200004');
+$db = new mysqli('sql3.freemysqlhosting.net', 'sql3471011', 'hluNnCf7mN', 'sql3471011');
 //$db = new mysqli('localhost', 'root', '', 'portfolio');
 
 if($db->connect_errno){
