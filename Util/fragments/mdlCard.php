@@ -19,7 +19,7 @@
         <div class="mdl-card__actions mdl-card--border">
             <a href="<?php echo $project->link; ?>" target="_blank">
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                    <?php echo $project->linkDescription; ?>
+                    <?php echo !empty($project->linkDescription) ? $project->linkDescription : 'Take a look'; ?>
                 </button>
             </a>
         </div>
