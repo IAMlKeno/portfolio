@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projects>
+  <project>
+    <projectId>1</projectId>
+    <projectTitle>PHP Read &amp; Write examples</projectTitle>
+    <description>
+      This is a PHP project completed by Elkeno Jones during my time at Holland College. It demonstrates the usage of PHP object oriented programming. It also demonstrates using PHP to read and write files on the server.
+    </description>
+    <link>src/Projects/phpReadWriteExample</link>
+    <linkDescription></linkDescription>
+    <imageLocation>imageLocation</imageLocation>
+    <projectType>PHP</projectType>
+    <tags>php, html</tags>
+  </project>
+  <project>
+    <projectId>2</projectId>
+    <projectTitle>XML Example</projectTitle>
+    <description>
+      This example parses predefined XML documents and decorates them using XSLTs that are also predefined.
+    </description>
+    <link>src/Projects/xmlExample</link>
+    <linkDescription></linkDescription>
+    <imageLocation>imageLocation</imageLocation>
+    <projectType>XML</projectType>
+    <tags>php, xml, xslt</tags>
+  </project>
+  <project>
+    <projectId>3</projectId>
+    <projectTitle>Comments</projectTitle>
+    <description>
+      This example demonstrates simple database usage to create and manage users and comments.
+    </description>
+    <link>src/Projects/comments</link>
+    <linkDescription></linkDescription>
+    <imageLocation>imageLocation</imageLocation>
+    <projectType>PHP</projectType>
+    <tags>php, mysql</tags>
+  </project>
+</projects>
