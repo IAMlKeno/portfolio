@@ -11,14 +11,21 @@
 namespace comments;
 use mysqli;
 
-// $db = new mysqli('sql3.freemysqlhosting.net', 'sql3200003', 'LuhzLynYaM', 'sql3200003');
-// For dev'in
+// For demo'in.
 $db = new mysqli(
-  'localhost',
-  'cis2288_admin',
-  'phpisfun',
-  'jenny_comments'
+  'sql3.freemysqlhosting.net',
+  'sql3472881',
+  '3hMeY1ZiQv',
+  'sql3472881'
 );
+
+// For dev'in
+// $db = new mysqli(
+//   'localhost',
+//   'cis2288_admin',
+//   'phpisfun',
+//   'jenny_comments'
+// );
 
 if ($db->connect_errno) {
   echo "<h2>Failed to connect to the data base!</h2> 
