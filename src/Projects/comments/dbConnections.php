@@ -11,14 +11,22 @@
 namespace comments;
 use mysqli;
 
-$db = new mysqli('sql3.freemysqlhosting.net', 'sql3200003', 'LuhzLynYaM', 'sql3200003');
+// $db = new mysqli('sql3.freemysqlhosting.net', 'sql3200003', 'LuhzLynYaM', 'sql3200003');
+// For dev'in
+$db = new mysqli(
+  'localhost',
+  'cis2288_admin',
+  'phpisfun',
+  'jenny_comments'
+);
 
-if($db->connect_errno)
-{
-    echo "<h2>Failed to connect to the data base!</h2> 
-    <p>It may not exist or you do not have the privileges to connect.<br />
-    please run the included sql script.</p>";
-    die();
+if ($db->connect_errno) {
+  echo "<h2>Failed to connect to the data base!</h2> 
+    <p>
+      It may not exist or you do not have the privileges to connect.<br />
+      Please run the included sql script.
+    </p>";
+  die();
 }
 
 

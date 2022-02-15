@@ -56,7 +56,7 @@ echo '
         </span>
         <nav class="mdl-navigation">
             <a class="mdl-navigation__link" href="index.php">Home</a>
-            <a class="mdl-navigation__link" href="../index.php">Back to Portfolio</a>
+            <a class="mdl-navigation__link" href="../../../index.php">Back to Portfolio</a>
         </nav>
     </div>
 ';

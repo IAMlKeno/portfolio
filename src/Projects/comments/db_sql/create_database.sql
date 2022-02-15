@@ -13,10 +13,11 @@ CREATE DATABASE `jenny_comments`;
 USE `jenny_comments`;
 
 /*create a user in database*/
-grant select, insert, update, delete on cis2288_comments.*
+grant select, insert, update, delete on jenny_comments.*
 to 'cis2288_admin'@'localhost'
 identified by 'phpisfun';
-flush privileges;
+
+FLUSH PRIVILEGES;
 
 -- CREATE USERS TABLE
 CREATE TABLE IF NOT EXISTS `users`(
