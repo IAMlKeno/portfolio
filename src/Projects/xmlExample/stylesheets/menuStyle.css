@@ -1,24 +1,24 @@
-.navBar{
-    border-bottom: 2px groove white;
-    margin: auto;
-    text-align: center;
+.navBar {
+  border-bottom: 2px groove white;
+  margin: auto;
+  text-align: center;
 }
 
-ul{
-    padding-top: 20px;
-    margin-left: -10px;
-    margin-bottom: 3%;
+ul {
+  padding-top: 20px;
+  margin-left: -10px;
+  margin-bottom: 3%;
 }
 
-ul li{
-    display: inline;
-    border: 4px groove white;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: darkgray;
-    font-weight: bolder;
-    font-size: 100%;
-    width: 30%;
+ul li {
+  display: inline;
+  border: 4px groove white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: darkgray;
+  font-weight: bolder;
+  font-size: 75%;
+  width: 30%;
 }
 ul li:hover{
     background-color: white;

@@ -16,7 +16,7 @@
     <projectId>2</projectId>
     <projectTitle>XML Example</projectTitle>
     <description>
-      This example parses predefined XML documents and decorates them using XSLTs that are also predefined.
+      This is a combination of PHP, XML and XSLT. This project demonstrates using PHP to read from an arbitrary XML document. It also demonstrates using XSLT to properly display the XML files. There are two XML documents that are used to show this. 
     </description>
     <link>src/Projects/xmlExample</link>
     <linkDescription></linkDescription>
