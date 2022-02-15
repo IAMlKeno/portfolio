@@ -5,7 +5,7 @@
  * Date: 2022-02-14
  */
 namespace portfolio;
-$title = "List";
+$title = "Projects";
 
 require("Util/model/Project.php");
 require("Util/fragments/head.php");
