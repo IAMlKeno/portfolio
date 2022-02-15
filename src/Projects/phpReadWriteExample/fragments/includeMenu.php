@@ -12,46 +12,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><?php echo "$title";?></title>
-    <link rel="stylesheet" href="style/veggiesStyle.css">
+  <title><?php echo "$title";?></title>
+  <link rel="stylesheet" href="style/veggiesStyle.css">
 </head>
 <body>
-<div id="container">
+  <div id="container">
     <div id="header">
-        <h1>Veggies-R-Us</h1>
+      <h1>Veggies-R-Us</h1>
     </div>
-<div class="navBar">
-        <ul>
-            <li>
-                <a href="index.php" class="<?php if($page ==  "orderVegetables") {echo "current";} ?>">
-                    Order Vegetables
-                </a>
-            </li>
-            <li>
-                <a href="viewOrders.php" class="<?php if($page ==  "viewOrders") {echo "current";} ?>">
-                    View Orders
-                </a>
-            </li>
-            <li>
-                <a href="resetVeggies.php" class="<?php if($page ==  "resetVeggies") {echo "current";} ?>">
-                    Reset Orders
-                </a>
-            </li>
-            <li>
-                <a href="addVeggies.php" class="<?php if($page == "addVeggies") {echo "current";} ?>">
-                    Add Veggies
-                </a>
-            </li>
-            <li>
-                <a href="viewVeggiesDatabase.php" class="<?php if($page == "viewVeggies") {echo "current";} ?>">
-                    View Veggies
-                </a>
-            </li>
-            <li>
-                <a href="about.php" class="<?php if($page ==  "about") {echo "current";} ?>">
-                    About Project
-                </a>
-            </li>
-    	</ul>
-</div>
+    <div class="navBar">
+      <ul>
+        <li>
+          <a href="index.php" class="<?php if($page ==  "orderVegetables") {echo "current";} ?>">
+            Order Vegetables
+          </a>
+        </li>
+        <li>
+          <a href="viewOrders.php" class="<?php if($page ==  "viewOrders") {echo "current";} ?>">
+            View Orders
+          </a>
+        </li>
+        <li>
+          <a href="resetVeggies.php" class="<?php if($page ==  "resetVeggies") {echo "current";} ?>">
+            Reset Orders
+          </a>
+        </li>
+        <li>
+          <a href="addVeggies.php" class="<?php if($page == "addVeggies") {echo "current";} ?>">
+            Add Veggies
+          </a>
+        </li>
+        <li>
+          <a href="viewVeggiesDatabase.php" class="<?php if($page == "viewVeggies") {echo "current";} ?>">
+            View Veggies
+          </a>
+        </li>
+        <li>
+          <a href="about.php" class="<?php if($page ==  "about") {echo "current";} ?>">
+            About Project
+          </a>
+        </li>
+      </ul>
+    </div>
     

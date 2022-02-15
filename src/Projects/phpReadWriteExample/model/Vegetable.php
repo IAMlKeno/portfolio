@@ -8,27 +8,21 @@
 
 namespace veggie;
 
+class Vegetable {
+  private $name;
+  private $price;
 
-class Vegetable
-{
+  function __construct($name, $price) {
+    $this->name = $name;
+    $this->price = $price;
+  }
 
-    private $name;
-    private $price;
+  public function __get($name) {
+    return $this->$name;
+  }
 
-    function __construct($name, $price)
-    {
-        $this->name = $name;
-        $this->price = $price;
-    }
-
-    public function __get($name)
-    {
-        return $this->$name;
-    }
-
-    public function __set($name, $value)
-    {
-      $this->$name = $value;
-    }
+  public function __set($name, $value) {
+    $this->$name = $value;
+  }
 
 }

@@ -5,13 +5,16 @@ namespace veggie;
  * Date: 2016-04-22
  * Time: 10:48 PM
  * Purpose:
- * Page containing to a form that will collect information to be used to add a new vegetable to the data base.
+ * Page containing a form that will collect information to be used to add a new vegetable to the database.
  * *****************************************************************************************************************
  */
 session_start();
 
 $page = "orderVegetables";
 $title = 'Vegetable Order Form';
+
+$DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
+// var_dump($DOCUMENT_ROOT . '/porfolio');die();
 
 include("fragments/includeMenu.php") ?>
     <fieldset>

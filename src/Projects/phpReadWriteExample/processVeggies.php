@@ -1,4 +1,5 @@
 <?php
+
 namespace veggie;
 /**
  * Author: Elkeno Jones_ejones109029
@@ -9,14 +10,15 @@ namespace veggie;
 include ("model/Line.php");
 include ("model/Vegetable.php");
 session_start();
+
 $page = "";
 
-// Define some constants
+// Define some constants.
 define('TAX', 0.15);
 define('DELIVERY_FEE', 5);
 define('FREE_DELIVERY', 50);
 
-$DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
+$DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'] . '/portfolio';
 
 date_default_timezone_set('America/Halifax');
 $_POST['fName'] = htmlspecialchars($_POST['fName']);
@@ -25,39 +27,44 @@ $_POST['phone'] = htmlspecialchars($_POST['phone']);
 $_POST['email'] = filter_var($_POST['email']);
 
 // Conditional if statement for error checking:
-if(empty($_POST['fName']) && empty($_POST['lName']) && empty($_POST['phone']) && empty($_POST['email'])){
+if (
+  empty($_POST['fName']) &&
+  empty($_POST['lName']) &&
+  empty($_POST['phone']) &&
+  empty($_POST['email'])
+) {
+  $title = "Error";
+  include("fragments/includeMenu.php");
+  echo "
+                <div id='content'>
+                    <p>There was an error! You have not entered your full information.</p>
+                </div>
+            </div>
+        </body>
+    </html>";
+  die;
+}
+elseif (isset($_SESSION['veggies'])) {
+  $noItemsSelected = false;
+  foreach ($_SESSION['veggies'] as $veg) {
+    $index = str_replace(' ', '_', $veg->name);
+    if (!empty($_POST[$index])) {
+      $noItemsSelected = true;
+    }
+  }
+
+  if (!$noItemsSelected) {
     $title = "Error";
     include("fragments/includeMenu.php");
     echo "
-                    <div id='content'>
-                        <p>There was an error! You have not entered your full information.</p>
-                    </div>
+                <div id='content'>
+                    <p>There was an error! You have not chosen any products!.</p>
                 </div>
-            </body>
-        </html>";
-
+            </div>
+        </body>
+    </html>";
     die;
-}
-else if (isset($_SESSION['veggies'])) {
-    $noItemsSelected = false;
-    foreach ($_SESSION['veggies'] as $veg) {
-        $index = str_replace(' ', '_', $veg->name);
-        if (!empty($_POST[$index]))
-            $noItemsSelected = true;
-    }
-
-    if (!$noItemsSelected) {
-        $title = "Error";
-        include("fragments/includeMenu.php");
-        echo "
-                    <div id='content'>
-                        <p>There was an error! You have not chosen any products!.</p>
-                    </div>
-                </div>
-            </body>
-        </html>";
-        die;
-    }
+  }
 }
 
 // Get customer information
@@ -66,11 +73,11 @@ $lName = $_POST['lName'];
 $phone = $_POST['phone'];
 $email = $_POST['email'];// create the line
 $order = array();
-foreach ($_SESSION['veggies'] as $veg)
-{
-    $index = str_replace(' ', '_', $veg->name);
-    if($_POST[$index] > 0)
-        array_push($order, new Line(ucfirst($veg->name), $_POST[$index], $veg->price));
+foreach ($_SESSION['veggies'] as $veg) {
+  $index = str_replace(' ', '_', $veg->name);
+  if($_POST[$index] > 0) {
+    array_push($order, new Line(ucfirst($veg->name), $_POST[$index], $veg->price));
+  }
 }
 $total = 0;
 
@@ -78,69 +85,73 @@ $total = 0;
 $output = $fName. ' '. $lName. "\r\nContact Number: ". $phone. "\r\nEmail Address: ". $email. "\r\nDate: ". date('F d Y').
     ' Time: '. date('g:iA')."\r\n";
 
-foreach ($order as $line)
-{
-    $total += $line->total;
-    $output .= $line->qty. "lbs - ". $line->item ." @ $". $line->price. "\r\n";
+foreach ($order as $line) {
+  $total += $line->total;
+  $output .= $line->qty. "lbs - ". $line->item ." @ $". $line->price. "\r\n";
 }
 
-if($total >= 50){
-    $output .= "Free Shipping!\r\n\r\n";
-} else{
-    $total += DELIVERY_FEE;
+if ($total >= 50) {
+  $output .= "Free Shipping!\r\n\r\n";
+}
+else {
+  $total += DELIVERY_FEE;
 }
 $taxAmount = $total * TAX;
 $taxedTotal = $total + $taxAmount;
 $output .= "Total: $$taxedTotal (Taxes: $$taxAmount)\r\n,\r\n";
 
-// Conditional if statement that will either create the order file or simply update it by appending the information
-if(!file_exists("$DOCUMENT_ROOT/orders/veggie-orders.txt")){
-    $file = fopen("$DOCUMENT_ROOT/orders/veggie-orders.txt", 'w+');
+// Conditional if statement that will either create the order file
+// or simply update it by appending the information.
+if (!file_exists("$DOCUMENT_ROOT/orders/veggie-orders.txt")) {
+  $file = fopen("$DOCUMENT_ROOT/orders/veggie-orders.txt", 'w+');
 
-    flock($file, LOCK_EX);
+  flock($file, LOCK_EX);
 
-    if (!$file) {
-        $title = "Error";
-        include("fragments/includeMenu.php");
-        echo "
-                        <div id='content'>
-                            <p><strong>Your order could not be processed at this time. Please try again later.</strong>
-                            </p>
-                        </div>
-                    </div>
-			    </body>
-		    </html>";
-        die;
-    }
+  if (!$file) {
+    $title = "Error";
+    include("fragments/includeMenu.php");
+    echo "
+            <div id='content'>
+              <p>
+                <strong>
+                  Your order could not be processed at this time. Please try again later.
+                </strong>
+              </p>
+            </div>
+          </div>
+        </body>
+      </html>";
+    die;
+  }
 
-    fwrite($file, $output);
-    flock($file, LOCK_UN);
-    fclose($file);
-
-} else{
-    $file = fopen("$DOCUMENT_ROOT/orders/veggie-orders.txt", 'a+');
-
-    flock($file, LOCK_EX);
-
-    if (!$file) {
-        $title = "Error";
-        include("fragments/includeMenu.php");
-        echo "
-                        <div id='content'
-                            <p><strong> Your order could not be processed at this time. Please try again later.</strong>
-                            </p>
-                        </div>
-                    </div>
-			    </body>
-		    </html>";
-        die;
-    }
-
-    fwrite($file, $output);
-    flock($file, LOCK_UN);
-    fclose($file);
+  fwrite($file, $output);
+  flock($file, LOCK_UN);
+  fclose($file);
 }
-//echo when the order was processed
+else {
+  $file = fopen("$DOCUMENT_ROOT/orders/veggie-orders.txt", 'a+');
+
+  flock($file, LOCK_EX);
+
+  if (!$file) {
+    $title = "Error";
+    include("fragments/includeMenu.php");
+    echo "
+                      <div id='content'
+                          <p><strong> Your order could not be processed at this time. Please try again later.</strong>
+                          </p>
+                      </div>
+                  </div>
+        </body>
+      </html>";
+    die;
+  }
+
+  fwrite($file, $output);
+  flock($file, LOCK_UN);
+  fclose($file);
+}
+// Echo when the order was processed.
 $title = "Order Processed";
 include("fragments/includeMenu.php");
 echo "
@@ -149,21 +160,22 @@ echo "
                         <p>The total before tax was $". number_format($total, 2). "<br>The tax comes to $".
     number_format($taxAmount, 2). ".<br> And the net total is $". number_format($taxedTotal, 2). "</p>";
 
-if($taxedTotal >= FREE_DELIVERY) {
-    echo "
-                <p>Heads up! YOU GOT FREE SHIPPING! <br><br>
-                <a href='index.php'>Add another order</a> now?<br>
-                Or would you like to <strong><a href='resetVeggies.php'>reset the orders</a></strong>?</p>
-                </div>
-            </div>
-            </body>
-	        </html>";
-} else {
-    echo "
-                <p><a href='index.php'>Add another order</a> now?<br>
-                Or would you like to <strong><a href='resetVeggies.php'>reset the orders</a></strong>?</p>
-                </div>
-            </div>
-            </body>
-	        </html>";
+if ($taxedTotal >= FREE_DELIVERY) {
+  echo "
+          <p>Heads up! YOU GOT FREE SHIPPING! <br><br>
+          <a href='index.php'>Add another order</a> now?<br>
+          Or would you like to <strong><a href='resetVeggies.php'>reset the orders</a></strong>?</p>
+          </div>
+      </div>
+      </body>
+    </html>";
+}
+else {
+  echo "
+          <p><a href='index.php'>Add another order</a> now?<br>
+          Or would you like to <strong><a href='resetVeggies.php'>reset the orders</a></strong>?</p>
+          </div>
+      </div>
+      </body>
+    </html>";
 }

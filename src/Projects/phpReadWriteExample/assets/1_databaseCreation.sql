@@ -5,7 +5,7 @@ use veggies;
 grant select, insert, update, delete on veggies.*
              to 'ejones'@'localhost'
              identified by 'Test1234';
-flush privileges;
+FLUSH PRIVILEGES;
 
 CREATE TABLE IF NOT EXISTS `vegetable` (
   `name` varchar(255) NOT NULL PRIMARY KEY,
