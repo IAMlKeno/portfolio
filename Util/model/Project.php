@@ -21,8 +21,16 @@ class Project
     private $tags;
     private $tagsList;
 
-    function __construct($projectId, $projectTitle, $descript, $link, $linkDescript, $imageLocation, $projectType, $tags)
-    {
+    function __construct(
+      $projectId,
+      $projectTitle,
+      $descript,
+      $link,
+      $linkDescript,
+      $imageLocation,
+      $projectType,
+      $tags
+    ) {
         $this->projectId = $projectId;
         $this->projectTitle = $projectTitle;
         $this->description = $descript;
